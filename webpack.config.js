@@ -3,7 +3,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/App.js',
     output: {
         filename: 'bundle.[chunkhash].js',
         path: path.resolve( __dirname, 'build' )
@@ -19,10 +19,10 @@ module.exports = {
     ],
     module: {
         rules: [
-          {
-              test: /\.css$/i,
-              use: ["style-loader", "css-loader"],
-          },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ],
-      },
+    },
 }
